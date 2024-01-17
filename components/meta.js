@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { siteMeta } from 'lib/constants'
 
+// サイトに関する情報
 const {
   siteTitle,
   siteDesc,
@@ -29,6 +30,7 @@ const Meta = ({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH }) => {
   const imgW = pageImgW || siteImg.width
   const imgH = pageImgH || siteImg.height
   const imgUrl = img.startsWith('https') ? img : '${siteUrl}$[img]'
+
   return (
     <Head>
       <title>{title}</title>
